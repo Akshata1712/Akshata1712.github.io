@@ -43,12 +43,12 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative group">
               <div className="absolute -inset-1 bg-accent opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500" />
-              {/* FIX: Changed object-cover to object-position to ensure the head is not cut off */}
+              {/* FIX: Changed object-bottom to object-top to ensure the head is visible */}
               <img 
                 src={PROFILE_IMAGE_URL} 
                 alt="Akshata Miramir Professional Portrait" 
-                // ADDED object-bottom to adjust the focal point
-                className="relative rounded-sm w-80 h-80 object-cover object-bottom border-2 border-accent/20 shadow-2xl" 
+                // CHANGED object-bottom to object-top to focus on the top of the image
+                className="relative rounded-sm w-80 h-80 object-cover object-top border-2 border-accent/20 shadow-2xl" 
               />
             </div>
           </div>
