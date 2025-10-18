@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Writing from "@/components/Writing";
+import Credentials from "@/components/Credentials";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Writing />
+        <Credentials />
+        <Contact />
+      </main>
+      
+      {/* Footer */}
+      <footer className="border-t border-border py-8">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground">
+              © 2024 Professional Portfolio. Designed for selective admissions.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Built with React, TypeScript & Tailwind CSS
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

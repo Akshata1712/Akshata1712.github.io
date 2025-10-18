@@ -8,89 +8,70 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Editorial Dark Mode - Deep Black Background */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Pure white for primary elements */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Neon Teal Accent - The ONLY accent color */
+    --accent: 174 100% 45%;
+    --accent-foreground: 0 0% 4%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 174 100% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Typography scale */
+    --heading-massive: 8rem;
+    --heading-xl: 4rem;
+    --heading-lg: 3rem;
+    --heading-md: 2rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Keep same values - we're dark by default */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
+    --accent: 174 100% 45%;
+    --accent-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 174 100% 45%;
   }
 }
 
@@ -100,6 +81,38 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-massive {
+    font-size: clamp(3rem, 12vw, var(--heading-massive));
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .text-editorial {
+    font-size: clamp(2rem, 6vw, var(--heading-xl));
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .hover-accent {
+    @apply transition-all duration-300 hover:text-accent;
+  }
+
+  .bento-card {
+    @apply bg-card border border-border rounded-sm p-6 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10;
+  }
+
+  .link-accent {
+    @apply text-accent hover:underline underline-offset-4 transition-all duration-200;
   }
 }
