@@ -48,7 +48,7 @@ const Hero = () => {
                 src={PROFILE_IMAGE_URL} 
                 alt="Akshata Miramir Professional Portrait" 
                 // CHANGED object-bottom to object-top to focus on the top of the image
-                className="relative rounded-sm w-80 h-80 object-cover object-[0%_15%] border-2 border-accent/20 shadow-2xl" 
+                className="relative rounded-sm w-80 h-80 object-cover object-[0%_25%] border-2 border-accent/20 shadow-2xl" 
               />
             </div>
           </div>
