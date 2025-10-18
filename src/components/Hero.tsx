@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 // NOTE: Images placed in the /public folder are referenced directly from the root (/)
 
 // UPDATED: Using the exact file name you uploaded to the public folder
-const PROFILE_IMAGE_URL = "/Akshata.jpg";
+const PROFILE_IMAGE_URL = "/Gemini photo Akshata.jpg";
 // Assumed file name for background image, also referenced from /public
 const HERO_BG_URL = "/hero-bg.jpg"; 
 
