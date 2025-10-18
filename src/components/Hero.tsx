@@ -22,7 +22,7 @@ const Hero = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">Driven to build modern digital finance solutions and solve complex industry challenges.</p>
             <div className="flex gap-4 pt-4">
-              <a href="#projects" className="link-accent text-lg font-semibold">Pojects -></a>
+              <a href="#projects" className="link-accent text-lg font-semibold">Pojects -&gt;</a>
               <a href="#contact" className="link-accent text-lg font-semibold">
                 Get in Touch →
               </a>
