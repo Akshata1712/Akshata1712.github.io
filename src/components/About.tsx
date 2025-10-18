@@ -1,22 +1,37 @@
-import { Code, Palette, Database, Terminal } from "lucide-react";
+import { Code, Database, Terminal, Wrench, BarChart3, FlaskConical, Palette } from "lucide-react";
 const About = () => {
-  const skills = [{
-    icon: Code,
-    name: "Python",
-    level: "Advanced"
-  }, {
-    icon: Terminal,
-    name: "JavaScript/React",
-    level: "Proficient"
-  }, {
-    icon: Palette,
-    name: "Figma/UI Design",
-    level: "Proficient"
-  }, {
-    icon: Database,
-    name: "SQL/PostgreSQL",
-    level: "Intermediate"
-  }];
+  const skillCategories = [
+    {
+      icon: Code,
+      category: "Programming",
+      tools: "Python, C, SQL"
+    },
+    {
+      icon: Database,
+      category: "Data & ML",
+      tools: "NumPy, Pandas, Matplotlib, scikit-learn, PyTorch"
+    },
+    {
+      icon: Terminal,
+      category: "Development",
+      tools: "HTML, CSS, JavaScript, Flask, Git, VS Code"
+    },
+    {
+      icon: BarChart3,
+      category: "Analytics & Visualization",
+      tools: "Excel, Power BI, Jupyter Notebook"
+    },
+    {
+      icon: Wrench,
+      category: "Testing & Automation",
+      tools: "Selenium"
+    },
+    {
+      icon: Palette,
+      category: "Design",
+      tools: "Canva"
+    }
+  ];
   return <section id="about" className="py-24 border-t border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
@@ -34,11 +49,11 @@ const About = () => {
             <div className="bento-card">
               <h3 className="text-xl font-bold mb-6">Core Tools</h3>
               <div className="space-y-4">
-                {skills.map(skill => <div key={skill.name} className="flex items-start gap-3">
-                    <skill.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                {skillCategories.map(category => <div key={category.category} className="flex items-start gap-3">
+                    <category.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold">{skill.name}</p>
-                      <p className="text-sm text-muted-foreground">{skill.level}</p>
+                      <p className="font-semibold">{category.category}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{category.tools}</p>
                     </div>
                   </div>)}
               </div>
