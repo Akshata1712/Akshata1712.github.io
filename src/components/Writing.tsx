@@ -9,34 +9,35 @@ interface BlogPost {
 }
 
 const Writing = () => {
+  // Data sourced from @TheDataDrivenDollar Medium profile
   const posts: BlogPost[] = [
     {
-      title: "Understanding Neural Network Architectures: From Perceptrons to Transformers",
-      date: "March 2024",
-      excerpt: "A comprehensive exploration of how neural networks evolved from simple perceptrons to modern transformer architectures. I break down the mathematics behind backpropagation, explain the vanishing gradient problem, and demonstrate why attention mechanisms revolutionized NLP. Includes Python implementations and visualization code for each architecture discussed.",
-      topics: ["Machine Learning", "Deep Learning", "Computer Science"],
-      url: "https://medium.com/@yourname/neural-network-architectures"
+      title: "AI as a Magic Show, XAI as the Revealed Trick",
+      date: "September 15",
+      excerpt: "You've seen the show: the dazzling predictions, the confident buy and sell signals. This article explores how Explainable AI (XAI) pulls back the curtain on deep learning models, making them transparent and auditable for critical applications in Fintech and risk management.",
+      topics: ["AI Ethics", "Explainable AI", "Fintech", "Risk"],
+      url: "https://medium.com/@TheDataDrivenDollar/ai-as-a-magic-show-xai-as-the-revealed-trick-729d2daf6f1f"
     },
     {
-      title: "Building Scalable APIs: Lessons from Production Failures",
-      date: "January 2024",
-      excerpt: "After my first API deployment crashed under 500 concurrent users, I learned system design the hard way. This post documents my journey implementing rate limiting, connection pooling, and circuit breakers. I share load testing strategies using k6, database optimization techniques that reduced query time by 80%, and the caching strategies that finally made my API production-ready.",
-      topics: ["Backend Development", "System Design", "DevOps"],
-      url: "https://medium.com/@yourname/scalable-apis"
+      title: "Can a Neural Network Spot the Next Unicorn Before Wall Street?",
+      date: "August 14",
+      excerpt: "What if your predictions didn’t just look at numbers, but at relationships? We dive into Graph Neural Networks (GNNs) and their ability to analyze complex interconnected financial data, offering a powerful, cutting-edge approach to investment scouting and market forecasting.",
+      topics: ["Graph Neural Networks", "Investing", "Predictive Modeling"],
+      url: "https://medium.com/@TheDataDrivenDollar/can-a-neural-network-spot-the-next-unicorn-before-wall-street-8a19f8462c56"
     },
     {
-      title: "The Math Behind Computer Graphics: Linear Algebra in Action",
-      date: "November 2023",
-      excerpt: "Computer graphics seemed like magic until I understood the linear algebra powering it. This piece demystifies transformation matrices, quaternions for 3D rotation, and the rendering pipeline. I walk through building a basic 3D renderer from scratch in Python, explaining each mathematical operation with visual diagrams and interactive demos.",
-      topics: ["Mathematics", "Computer Graphics", "Python"],
-      url: "https://medium.com/@yourname/graphics-linear-algebra"
+      title: "Deep Learning in Hedge Funds: The Future of Market Prediction",
+      date: "August 2",
+      excerpt: "Hedge funds constantly seek 'alpha'—returns that beat the market. This post details how deep learning models are being deployed to exploit subtle market inefficiencies, automate trading strategies, and manage vast, high-frequency financial datasets with superior accuracy.",
+      topics: ["Deep Learning", "Algorithmic Trading", "Finance"],
+      url: "https://medium.com/@TheDataDrivenDollar/deep-learning-in-hedge-funds-the-future-of-market-prediction-36507eb1a3ea"
     },
     {
-      title: "Designing for Accessibility: Beyond Compliance",
-      date: "September 2023",
-      excerpt: "After volunteering to audit my school's website, I discovered that most accessibility fixes benefit everyone. This article goes beyond WCAG checklists to explore the cognitive science behind inclusive design. I discuss color contrast ratios for users with visual impairments, keyboard navigation patterns, screen reader optimization, and how semantic HTML improves SEO while supporting assistive technologies.",
-      topics: ["UI/UX Design", "Web Development", "Accessibility"],
-      url: "https://medium.com/@yourname/accessibility-design"
+      title: "Can Machine Learning Really Predict Stock Market Crashes?",
+      date: "May 15",
+      excerpt: "The stock market is a chaotic, unpredictable mix of factors. We analyze the effectiveness and limitations of machine learning in forecasting extreme volatility and system-wide failures, exploring models that go beyond simple time series to detect subtle precursors to crashes.",
+      topics: ["Time Series Analysis", "Risk Modeling", "Financial Data"],
+      url: "https://medium.com/@TheDataDrivenDollar/can-machine-learning-really-predict-stock-market-crashes-2a33828f544d"
     },
   ];
 
@@ -100,3 +101,4 @@ const Writing = () => {
 };
 
 export default Writing;
+
