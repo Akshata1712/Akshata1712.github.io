@@ -1,11 +1,21 @@
 import { ArrowDown } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+// REMOVED: We no longer need to import images since we use the /public folder
+// import profilePhoto from "@/assets/akshata_profile.jpg"; 
+// import heroBg from "@/assets/hero-bg.jpg";
+
+// NOTE: Images placed in the /public folder are referenced directly from the root (/)
+
+// UPDATED: Using the exact file name you uploaded to the public folder
+const PROFILE_IMAGE_URL = "/Akshata.jpg";
+// Assumed file name for background image, also referenced from /public
+const HERO_BG_URL = "/hero-bg.jpg"; 
+
 const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0" style={{
-      backgroundImage: `url(${heroBg})`,
+      // FIX: Use URL from the /public folder
+      backgroundImage: `url(${HERO_BG_URL})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: 0.15
@@ -13,27 +23,32 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 lg:px-12 z-10 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Typography */}
+          {/* Left: Typography - NAME IS SET */}
           <div className="space-y-6">
             <h1 className="text-massive uppercase tracking-tight">
-              Fintech
+              AKSHATA
               <br />
-              <span className="text-accent">INNOVATOR</span>
+              <span className="text-accent">MIRAMIR</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">Driven to build modern digital finance solutions and solve complex industry challenges.</p>
             <div className="flex gap-4 pt-4">
-              <a href="#projects" className="link-accent text-lg font-semibold">Pojects -&gt;</a>
+              <a href="#projects" className="link-accent text-lg font-semibold">Projects →</a>
               <a href="#contact" className="link-accent text-lg font-semibold">
                 Get in Touch →
               </a>
             </div>
           </div>
 
-          {/* Right: Photo */}
+          {/* Right: Photo - USES NEW PUBLIC PHOTO */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative group">
               <div className="absolute -inset-1 bg-accent opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500" />
-              <img src={profilePhoto} alt="Professional portrait" className="relative rounded-sm w-80 h-80 object-cover border-2 border-accent/20 shadow-2xl" />
+              {/* FIX: Reference the image directly from the root /public folder */}
+              <img 
+                src={PROFILE_IMAGE_URL} 
+                alt="Akshata Miramir Professional Portrait" 
+                className="relative rounded-sm w-80 h-80 object-cover border-2 border-accent/20 shadow-2xl" 
+              />
             </div>
           </div>
         </div>
