@@ -84,17 +84,17 @@ const Contact = () => {
               <div className="bento-card">
                 <h3 className="text-xl font-bold mb-6">Connect</h3>
                 <div className="space-y-3">
-                  <a href="mailto:your.email@university.edu" className="flex items-center gap-3 hover-accent group">
+                  <a href="mailto:akmiramir17@gmail.com" className="flex items-center gap-3 hover-accent group">
                     <Mail className="w-5 h-5 text-accent" />
                     <span className="text-sm">akmiramir17@gmail.com</span>
                   </a>
-                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover-accent group">
+                  <a href="https://github.com/Akshata1712" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover-accent group">
                     <Github className="w-5 h-5 text-accent" />
                     <span className="text-sm">github.com/Akshata1712</span>
                   </a>
-                  <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover-accent group">
+                  <a href="https://www.linkedin.com/in/akshata-miramir-b9208a295/" rel="noopener noreferrer" className="flex items-center gap-3 hover-accent group">
                     <Linkedin className="w-5 h-5 text-accent" />
-                    <span className="text-sm">(1) Akshata Miramir | LinkedIn</span>
+                    <span className="text-sm"> Akshata Miramir | LinkedIn</span>
                   </a>
                 </div>
               </div>
