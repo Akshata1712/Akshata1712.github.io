@@ -15,21 +15,14 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Typography */}
           <div className="space-y-6">
-            <h1 className="text-massive uppercase tracking-tight leading-none">
-              Fintech Innovator:
+            <h1 className="text-massive uppercase tracking-tight">
+              Fintech
               <br />
-              <span className="text-accent">Building Digital</span>
-              <br />
-              <span className="text-accent">Finance Solutions</span>
+              <span className="text-accent">INNOVATOR</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Driven to build modern digital finance solutions and solve complex industry challenges. 
-              My portfolio showcases technical precision (Python, SQL) and intellectual growth, guiding my pursuit of advanced FinTech study.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">Driven to build modern digital finance solutions and solve complex industry challenges.</p>
             <div className="flex gap-4 pt-4">
-              <a href="#projects" className="link-accent text-lg font-semibold">
-                View Projects →
-              </a>
+              <a href="#projects" className="link-accent text-lg font-semibold">Driven to build modern digital finance solutions and solve complex industry challenges. </a>
               <a href="#contact" className="link-accent text-lg font-semibold">
                 Get in Touch →
               </a>
