@@ -20,10 +20,7 @@ const Hero = () => {
               <br />
               <span className="text-accent">INNOVATOR</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-              STEM-focused innovator combining technical precision with design thinking. 
-              Crafting meaningful solutions at the intersection of code and creativity.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">Driven to build modern digital finance solutions and solve complex industry challenges.</p>
             <div className="flex gap-4 pt-4">
               <a href="#projects" className="link-accent text-lg font-semibold">
                 View Projects →
