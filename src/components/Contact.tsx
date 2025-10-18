@@ -47,12 +47,15 @@ const Contact = () => {
     <section id="contact" className="py-24 border-t border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-editorial mb-12">Get in Touch</h2>
+          <h2 className="text-editorial mb-4">Get in Touch</h2>
+          <p className="text-muted-foreground mb-12">
+            Open to discussions about FinTech research, graduate opportunities, and collaborative projects.
+          </p>
           
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Left: Contact Form */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Contact Form */}
             <div className="bento-card">
-              <h3 className="text-xl font-bold mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
@@ -105,28 +108,9 @@ const Contact = () => {
               </form>
             </div>
 
-            {/* Right: Contact Info & CV */}
+            {/* Contact Info & Links */}
             <div className="space-y-6">
-              <div className="bento-card">
-                <h3 className="text-xl font-bold mb-6">Academic Assets</h3>
-                <Button 
-                  className="w-full bg-secondary hover:bg-secondary/80 text-foreground font-semibold mb-4"
-                  onClick={() => {
-                    toast({
-                      title: "CV download started",
-                      description: "Your download will begin shortly.",
-                    });
-                  }}
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download CV / Resume
-                </Button>
-                <p className="text-sm text-muted-foreground">
-                  Comprehensive academic CV including research experience, publications, 
-                  and detailed project descriptions. Updated monthly.
-                </p>
-              </div>
-
+              {/* Direct Contact */}
               <div className="bento-card">
                 <h3 className="text-xl font-bold mb-6">Connect</h3>
                 <div className="space-y-3">
@@ -161,8 +145,8 @@ const Contact = () => {
               <div className="bento-card bg-accent/5">
                 <p className="text-sm leading-relaxed">
                   <span className="font-bold">Open to Opportunities:</span> Actively seeking research 
-                  collaborations, internships, and academic programs focused on AI/ML, systems engineering, 
-                  or human-computer interaction for Fall 2025.
+                  collaborations, internships, and graduate programs focused on FinTech, Machine Learning, 
+                  and Data Science.
                 </p>
               </div>
             </div>

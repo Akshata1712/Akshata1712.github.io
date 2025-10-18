@@ -44,7 +44,8 @@ const Writing = () => {
     <section id="writing" className="py-24 border-t border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-editorial mb-12">Writing & Research</h2>
+          <h2 className="text-editorial mb-4">Writing & Research</h2>
+          <p className="text-xl text-accent font-semibold mb-12">@TheDataDrivenDollar</p>
           
           <div className="grid md:grid-cols-2 gap-6">
             {posts.map((post, index) => (
@@ -83,7 +84,7 @@ const Writing = () => {
 
           <div className="mt-12 text-center">
             <a 
-              href="https://medium.com/@yourname"
+              href="https://medium.com/@TheDataDrivenDollar"
               target="_blank"
               rel="noopener noreferrer"
               className="link-accent text-lg font-semibold inline-flex items-center gap-2"

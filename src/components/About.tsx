@@ -40,9 +40,9 @@ const About = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Bio */}
             <div className="lg:col-span-2 space-y-4">
-              <p className="text-lg leading-relaxed text-foreground/90">I’m a Computer Science Engineering student passionate about applying AI and data-driven methods to solve financial and real-world challenges.</p>
-              <p className="text-lg leading-relaxed text-foreground/90">My work spans machine learning, data analytics, and full-stack development, with a focus on building systems that combine technical depth with business relevance.</p>
-              <p className="text-lg leading-relaxed text-foreground/90">I enjoy translating complex concepts into clear, actionable insights, whether through research, design, or storytelling. My goal is to bridge technology and finance to create smarter, data-informed decisions.</p>
+              <p className="text-lg leading-relaxed text-foreground/90">I'm a Computer Science Engineering student passionate about applying AI and machine learning to solve financial technology challenges and real-world problems.</p>
+              <p className="text-lg leading-relaxed text-foreground/90">My work spans fraud detection, sentiment analysis for stock prediction, and deep learning applications, with a focus on building systems that combine technical precision with financial industry relevance.</p>
+              <p className="text-lg leading-relaxed text-foreground/90">I enjoy translating complex data science concepts into actionable insights. My goal is to bridge technology and finance through rigorous research and development in the FinTech sector.</p>
             </div>
 
             {/* Core Tools */}
