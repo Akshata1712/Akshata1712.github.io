@@ -21,11 +21,9 @@ const Hero = () => {
           {/* Left: Typography */}
           <div className="space-y-6">
             <h1 className="text-massive uppercase tracking-tight">
-              Building
+              Fintech
               <br />
-              <span className="text-accent">Tomorrow's</span>
-              <br />
-              Solutions
+              <span className="text-accent">Innovator</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
               STEM-focused innovator combining technical precision with design thinking. 
