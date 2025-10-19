@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const Resume = () => {
   const handleDownload = () => {
     // Replace with your actual CV/Resume file URL or path
-    const resumeUrl = "/Akshata Miramir Resume (MSF).pdf";
+    const resumeUrl = "https://github.com/Akshata1712/Akshata1712.github.io/blob/main/public/Akshata%20Miramir%20Resume%20(MSF).pdf";
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'CV_Resume.pdf';
