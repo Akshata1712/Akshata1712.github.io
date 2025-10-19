@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,62 +15,42 @@ const Contact = () => {
 
   const { toast } = useToast();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
 
-  const subject = encodeURIComponent(formData.subject || "Portfolio Contact Form");
-  const body = encodeURIComponent(
-    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-  );
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
 
-  // Opens the user's mail app to send you the message
-  window.location.href = `mailto:akmiramir17@gmail.com?subject=${subject}&body=${body}`;
-  
-  setFormData({ name: "", email: "", subject: "", message: "" });
+    const subject = encodeURIComponent(
+      formData.subject || "Portfolio Contact Form"
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
 
-  toast({
-    title: "Mail window opened!",
-    description: "Please send your message through your email client.",
-  });
-};
+    // Opens the user's mail app with pre-filled message
+    window.location.href = `mailto:akmiramir17@gmail.com?subject=${subject}&body=${body}`;
 
+    setFormData({ name: "", email: "", subject: "", message: "" });
 
-    emailjs
-      .send(
-        "service_kij6y73",       // your service ID
-        "template_su559ea",      // your template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        "ocGL4pmjkl39_5hkq"      // your public key
-      )
-      .then(
-        () => {
-          toast({
-            title: "Message sent successfully!",
-            description: "Thank you for reaching out. I'll respond ASAP.",
-          });
-          setFormData({ name: "", email: "", subject: "", message: "" });
-        },
-        (error) => {
-          toast({
-            title: "Error sending message",
-            description: "Please try again later.",
-            variant: "destructive",
-          });
-          console.error("EmailJS error:", error);
-        }
-      );
+    toast({
+      title: "Mail window opened!",
+      description: "Please send your message through your email client.",
+    });
   };
 
   return (
@@ -80,7 +59,8 @@ const handleSubmit = (e: React.FormEvent) => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-editorial mb-4">Get in Touch</h2>
           <p className="text-muted-foreground mb-12">
-            Open to discussions about FinTech research, graduate opportunities, and collaborative projects.
+            Open to discussions about FinTech research, graduate opportunities,
+            and collaborative projects.
           </p>
 
           <div className="grid lg:grid-cols-2 gap-8">
@@ -136,24 +116,41 @@ const handleSubmit = (e: React.FormEvent) => {
               <div className="bento-card">
                 <h3 className="text-xl font-bold mb-6">Connect</h3>
                 <div className="space-y-3">
-                  <a href="mailto:akmiramir17@gmail.com" className="flex items-center gap-3 hover-accent group">
+                  <a
+                    href="mailto:akmiramir17@gmail.com"
+                    className="flex items-center gap-3 hover-accent group"
+                  >
                     <Mail className="w-5 h-5 text-accent" />
                     <span className="text-sm">akmiramir17@gmail.com</span>
                   </a>
-                  <a href="https://github.com/Akshata1712" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover-accent group">
+                  <a
+                    href="https://github.com/Akshata1712"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 hover-accent group"
+                  >
                     <Github className="w-5 h-5 text-accent" />
                     <span className="text-sm">github.com/Akshata1712</span>
                   </a>
-                  <a href="https://www.linkedin.com/in/akshata-miramir-b9208a295/" rel="noopener noreferrer" className="flex items-center gap-3 hover-accent group">
+                  <a
+                    href="https://www.linkedin.com/in/akshata-miramir-b9208a295/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 hover-accent group"
+                  >
                     <Linkedin className="w-5 h-5 text-accent" />
-                    <span className="text-sm"> Akshata Miramir | LinkedIn</span>
+                    <span className="text-sm">
+                      Akshata Miramir | LinkedIn
+                    </span>
                   </a>
                 </div>
               </div>
 
               <div className="bento-card bg-accent/5">
                 <p className="text-sm leading-relaxed">
-                  <span className="font-bold">Open to Opportunities:</span> Actively seeking research collaborations, internships, and graduate programs focused on FinTech, Machine Learning, and Data Science.
+                  <span className="font-bold">Open to Opportunities:</span>{" "}
+                  Actively seeking research collaborations, internships, and
+                  graduate programs focused on Finance, FinTech, and Machine Learning.
                 </p>
               </div>
             </div>
