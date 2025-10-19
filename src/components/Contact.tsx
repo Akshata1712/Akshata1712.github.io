@@ -23,16 +23,25 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Please fill in all required fields",
-        variant: "destructive",
-      });
-      return;
-    }
+  const subject = encodeURIComponent(formData.subject || "Portfolio Contact Form");
+  const body = encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+  );
+
+  // Opens the user's mail app to send you the message
+  window.location.href = `mailto:akmiramir17@gmail.com?subject=${subject}&body=${body}`;
+  
+  setFormData({ name: "", email: "", subject: "", message: "" });
+
+  toast({
+    title: "Mail window opened!",
+    description: "Please send your message through your email client.",
+  });
+};
+
 
     emailjs
       .send(
