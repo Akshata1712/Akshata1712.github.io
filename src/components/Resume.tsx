@@ -7,7 +7,7 @@ const Resume = () => {
     const resumeUrl = "https://github.com/Akshata1712/Akshata1712.github.io/blob/main/public/Akshata%20Miramir%20Resume%20(MSF).pdf";
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'CV_Resume.pdf';
+    link.download = 'Akshata_CV_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
